@@ -16,7 +16,7 @@ const Todo = ({ todo, refreshData }: Props) => {
 	const [text, setText] = useState(todo.text);
 	let done = todo.done;
 	function deleteTodo() {
-		fetch(`http://localhost:3030/todos`, {
+		fetch(`https://todoapi-rsph.onrender.com/todos`, {
 			method: "DELETE",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ id: todo._id })
@@ -30,7 +30,7 @@ const Todo = ({ todo, refreshData }: Props) => {
 			});
 	}
 	function updateTodo() {
-		fetch(`http://localhost:3030/todos`, {
+		fetch(`https://todoapi-rsph.onrender.com/todos`, {
 			method: "PUT",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({

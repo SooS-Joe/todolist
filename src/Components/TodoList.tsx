@@ -4,7 +4,7 @@ import Todo from "./Todo.tsx";
 const TodoList = () => {
 	const [todos, setTodos] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:3030/todos")
+		fetch("https://todoapi-rsph.onrender.com/todos")
 			.then((response) => response.json())
 			.then((data) => {
 				setTodos(data);

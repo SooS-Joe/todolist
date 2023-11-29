@@ -3,7 +3,7 @@ import { useState } from "react";
 const AddTodo = () => {
 	const [text, setText] = useState("");
 	function addTodo() {
-		fetch(`http://localhost:3030/todos`, {
+		fetch(`https://todoapi-rsph.onrender.com/todos`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ text: text, done: false })
